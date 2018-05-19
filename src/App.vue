@@ -14,9 +14,6 @@ import ProductListTwo from './components/ProductListTwo.vue'
 export default {
   name: 'app',
   components: { ProductListOne, ProductListTwo },
-  data: () => ({
-
-  }),
   methods: {
     changeTitle() {
       this.$store.dispatch('changeTitle')
