@@ -2,7 +2,7 @@
   <div>
     <h1>Product List One</h1>
     <ul>
-      <li v-for="(post, index) in posts" :key="index">
+      <li v-for="(post, index) in starredPosts" :key="index">
         <b>{{ post.title }}</b>
         {{ post.body }}
       </li>
@@ -15,8 +15,8 @@
 export default {
   name: 'ProductListOne',
   computed: {
-    posts: function() {
-      return this.$store.state.posts
+    starredPosts() {
+      return this.$store.getters.starredPosts
     }
   }
 }

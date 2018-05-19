@@ -15,7 +15,7 @@
 export default {
   name: 'ProductListTwo',
   computed: {
-    posts: function() {
+    posts() {
       return this.$store.state.posts
     }
   }
