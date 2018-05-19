@@ -3,6 +3,7 @@
     <h1>Hello World</h1>
     <ProductListOne></ProductListOne>
     <ProductListTwo></ProductListTwo>
+    <button @click="changeTitle">Change Title</button>
   </div>
 </template>
 
@@ -15,6 +16,11 @@ export default {
   components: { ProductListOne, ProductListTwo },
   data: () => ({
 
-  })
+  }),
+  methods: {
+    changeTitle() {
+      this.$store.commit('changeTitle')
+    }
+  }
 }
 </script>

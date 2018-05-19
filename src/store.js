@@ -28,6 +28,11 @@ export const store = new Vuex.Store({
       },
     ]
   },
+  mutations: {
+    changeTitle: state => {
+      state.posts.map(item => item.title = 'Hello Vuex')
+    }
+  },
   getters: {
     starredPosts: state => (
       state.posts.filter((item) => item.star === true)
