@@ -19,7 +19,7 @@ export default {
   }),
   methods: {
     changeTitle() {
-      this.$store.commit('changeTitle')
+      this.$store.dispatch('changeTitle')
     }
   }
 }

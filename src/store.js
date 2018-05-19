@@ -29,8 +29,15 @@ export const store = new Vuex.Store({
     ]
   },
   mutations: {
-    changeTitle: state => {
-      state.posts.map(item => item.title = 'Hello Vuex')
+    changeTitle(state, payload) {
+      state.posts.map(item => item.title = payload)
+    }
+  },
+  actions: {
+    changeTitle(context) {
+      setTimeout(() => {
+        context.commit('changeTitle', 'Hello Vuex')
+      }, 2000)
     }
   },
   getters: {
